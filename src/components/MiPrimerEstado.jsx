@@ -4,8 +4,8 @@ const MiPrimerEstado = () => {
   const [nombre, setNombre] = useState('Christian Fernández')
 
 
-  const cambiarNombre = () => {
-    setNombre('Otro Nombre')
+  const cambiarNombre = e => {
+    setNombre(e.target.value)
   }
 
   return (
@@ -15,10 +15,16 @@ const MiPrimerEstado = () => {
         {nombre}
       </strong>
       <button
-        onClick={cambiarNombre}
+        onClick={()=> setNombre('Otro nombre')}
       >
         Cambiar texto
       </button>
+
+      <input
+        type="text"
+        placeholder="Cambia el nombre"
+        onChange={cambiarNombre}
+      />
     </div>
   )
 }

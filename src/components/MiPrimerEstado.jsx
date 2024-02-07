@@ -1,11 +1,11 @@
-
+import { useState } from "react"
 
 const MiPrimerEstado = () => {
+  const [nombre, setNombre] = useState('Christian Fernández')
 
-  let nombre = 'Christian Fernández'
 
   const cambiarNombre = () => {
-    nombre = 'Otro nombre'
+    setNombre('Otro Nombre')
   }
 
   return (
